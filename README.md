@@ -1,6 +1,8 @@
 # new_proposed_buildings
 WebGIS using MapBox to display new and proposed buildings in the City of Melbourne
 
+![Melbourne 3D Map Preview](images/new_proposed_buildings.png)
+
 ## Melbourne Skyline: New and Proposed Buildings
 An interactive 3D mapping application that tracks urban development across the City of Melbourne. 
 It visualises newly completed, approved, under-construction, and applied-for structures in an immersive 3D view.Users can toggle filters to see buildings by their development status and click on any individual structure to view its detailed metrics in a popup box.
@@ -22,3 +24,5 @@ Minimalist UI: A clean, flat user interface built from scratch without bulky fro
 └── index.css      
 └── index.js  
 └── README.md  
+
+
