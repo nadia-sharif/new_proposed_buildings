@@ -17,6 +17,8 @@ Minimalist UI: A clean, flat user interface built from scratch without bulky fro
 ### Data Source: City of Melbourne Open Data Team (2024 Dataset).
 
 ## Project Structure
-├── index.html    
-├── index.css      
-└── index.js       
+└── images/new_proposed_buildings.png  
+└── index.html    
+└── index.css      
+└── index.js  
+└── README.md  
