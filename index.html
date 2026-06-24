@@ -1,0 +1,46 @@
+<html>
+
+<head>
+
+    <!-- 1. Include the Mapbox GL JS CSS file -->
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
+
+    <!-- 2. Include the Mapbox GL JS JavaScript file -->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+    
+    <!-- 3. Include the CSS Stylesheet file -->
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <div id='map'></div>
+    
+    <div class='map-overlay'>
+        <header>
+            <h1>New & Proposed Buildings</h1>
+            <span class="location-tag">City of Melbourne</span>
+        </header>
+
+        <section class="description-section">
+            <p>Visualising newly completed, approved, under-construction, and applied-for structures in immersive 3D.</p>
+            <p class="instruction">💡 Click any building to view detailed development metrics.</p>
+        </section>
+
+        <!-- The JavaScript generated filter buttons sit elegantly inside the panel context -->
+        <section class="filter-section">
+            <label>Filter Building Status</label>
+            <nav id='button'></nav>
+        </section>
+        
+      <section class="description-section">
+        <p >Data Source:City of Melbourne Open Data Team (2024)</p>
+      </section>  
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+
+
+</html>
