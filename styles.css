@@ -1,0 +1,166 @@
+/* Import clean modern font architecture */
+@import url('https://googleapis.com');
+
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Minimalist Sidebar Container */
+.map-overlay {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    color: #2D3142;
+    width: 320px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+/* Typography Hierarchy (Consolidated font sizes) */
+.map-overlay h1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 4px 0;
+    color: #111827;
+}
+
+.location-tag {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3887be;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.description-section {
+    margin: 16px 0;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 16px;
+}
+
+.description-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4B5563;
+    margin: 0 0 12px 0;
+}
+
+.description-section p.instruction {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1F2937;
+    background: #F3F4F6;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 0;
+}
+
+.filter-section label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #9CA3AF;
+    margin-bottom: 12px;
+}
+
+/* Button Filtering Layout */
+#button {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+/* 1. DEFAULT STATE = DISABLED (Filtered Out) */
+#button a {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: #9CA3AF;
+    background-color: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    padding: 12px 16px 12px 40px;
+    text-decoration: none;
+    text-align: left;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: background-color 0.2s ease;
+}
+
+#button a::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #D1D5DB;
+    border-radius: 50%;
+}
+
+#button a:hover {
+    opacity: 0.85;
+    background-color: #F3F4F6;
+}
+
+/* 2. ENABLED STATES (Active status colors match the screenshot container) */
+#button a.active {
+    opacity: 1;
+    font-weight: 700;
+    color: #1A1D26; /* Your deep navy-charcoal font color */
+    font-weight: 700; /* Bold text provides more surface area for contrast */
+    letter-spacing: 0.2px; /* Opens up the text slightly for readability */
+    
+    /* Subtle white halo effect around the text */
+    text-shadow: 
+        -1px -1px 0 rgba(255, 255, 255, 0.8),  
+         1px -1px 0 rgba(255, 255, 255, 0.8),
+        -1px  1px 0 rgba(255, 255, 255, 0.8),
+         1px  1px 0 rgba(255, 255, 255, 0.8);
+}
+
+
+#button a.active::before {
+    background-color: #10B981; /* High contrast green active status dot */
+}
+
+/* 3. CATEGORY SPECIFIC ACTIVE BACKGROUNDS */
+#button a.applied.active {
+    background-color: #fbb4b9; /* Light Pink */
+    border-color: #fbb4b9;
+}
+
+#button a.approved.active {
+    background-color: #f768a1; /* Hot Pink */
+    border-color: #f768a1;
+}
+
+#button a.under-construction.active {
+    background-color: #ae017e; /* Purple */
+    border-color: #ae017e;
+}
+
+#button a.completed.active {
+    background-color: #7a0177; /* Deep Plum */
+    border-color: #7a0177;
+}
